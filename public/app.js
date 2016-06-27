@@ -1,15 +1,14 @@
-var app;
-(app = function() {
+(function() {
     "use strict";
 
-    angular.module('li', ['li.services', 'li.controllers', 'ui.router']).
+    var app = angular.module('app', ['ui.router']);
 
-    config(function($stateProvider, $urlRouterProvider) {
-        $urlRouterProvider.otherwise("/login ");
+    app.config(function($stateProvider, $urlRouterProvider) {
+        $urlRouterProvider.otherwise("/");
 
         $stateProvider
             .state('login', {
-                url: "/login",
+                url: "/вход",
                 templateUrl: "views/login/login.html"
             })
             .state('dashboard', {
@@ -17,20 +16,23 @@ var app;
                 templateUrl: "views/dashboard/dash.html"
             })
             .state('story', {
-                url: "/story",
+                url: "/история",
                 templateUrl: "views/story/story.html",
             })
             .state('timeline', {
-                url: "/timeline",
+                url: "/разписание",
                 templateUrl: "views/timeline/timeline.html",
             })
             .state('media', {
-                url: "/media",
+                url: "/медия",
                 templateUrl: "views/media/media.html",
             })
             .state('admin', {
                 url: "/admin",
                 templateUrl: "views/admin/admin.html",
             });
+    });
+
+    app.run(function($rootScope) {
     });
 })();

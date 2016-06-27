@@ -1,8 +1,44 @@
+@import 'https://fonts.googleapis.com/css?family=Cormorant+Infant|Lobster';
+
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    padding: 50px;
+    font-family: 'Lobster', cursive;
+    background-color: #191919;
+    /*color: #7F6B00;*/
+    color: #CFAB50;
+    font-size: 1.6em;
+    background-image: url("../images/woods.jpg");
 }
 
 a {
   color: #00B7FF;
+}
+
+.main {
+    min-width: 400px;
+    text-align: center;
+    margin: auto;
+}
+
+svg line {
+    stroke: black;
+}
+
+.hero {
+    padding-top: 10%;
+}
+
+.primary {
+    display: inline-block;
+    border-radius: 2px;
+    color: #191919;
+    background-color: #808E8E;
+    padding: 6px;
+    margin: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.primary:hover {
+    background-color: #CFAB50;
 }

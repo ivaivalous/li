@@ -3,6 +3,7 @@ var router = express.Router();
 var MongoClient = require('mongodb').MongoClient;
 var ObjectId = require('mongodb').ObjectID;
 var assert = require('assert');
+var auth = require('../backend/authentication.js');
 var url = 'mongodb://localhost:27017/li';
 
 router.post('/', function(req, res, next) {
@@ -20,6 +21,7 @@ router.post('/', function(req, res, next) {
             db, code,
             function(data) {
                 // Code was found
+                data.jwt = auth.sign(data);
                 res.status(200);
                 res.json(data);
             },

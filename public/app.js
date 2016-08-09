@@ -13,6 +13,8 @@
             })
             .state('dashboard', {
                 url: "/",
+                controller: "loginController",
+                controllerAs: "vm",
                 templateUrl: "views/dashboard/dash.html"
             })
             .state('story', {
@@ -26,10 +28,6 @@
             .state('media', {
                 url: "/медия",
                 templateUrl: "views/media/media.html",
-            })
-            .state('admin', {
-                url: "/admin",
-                templateUrl: "views/admin/admin.html",
             });
     });
 

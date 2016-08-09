@@ -8,5 +8,13 @@
 </div>
 
 <div class="login-invite">
-    <span class="primary">влезте</span> за повече информация, снимки и инструкции
+    <span class="primary" ng-click="showLoginForm = true">влезте</span> за повече информация, снимки и инструкции
+</div>
+
+<div class="login-form" ng-show="showLoginForm">
+    Въведете кода, който можете да намерите отпечатан на гърба на поканата.
+    <input id="access-code" ng-model="vm.accessCode" type="text" />
+    <button class="confirm" ng-click="vm.login()">
+        Вход
+    </button>
 </div>

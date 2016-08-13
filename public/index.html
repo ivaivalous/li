@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Л и И</title>
+    <title>Любов и Иво</title>
     <link rel="stylesheet" href="/stylesheets/style.css">
     <script src="javascript/lib/angular.min.js"></script>
     <script src="javascript/lib/angular-ui-router.min.js"></script>
     <script src="app.js"></script>
     <script src="javascript/services/services.js"></script>
     <script src="javascript/controllers/loginController.js"></script>
+    <script src="javascript/controllers/navigationController.js"></script>
 </head>
-<body>
 
-<div ng-app="app" class="main">
-    <div ui-view></div>
-</div>
-
+<body ng-app="app">
+    <header ui-view="top-nav"></header>
+    <main ui-view="content"></main>
 </body>
+
 </html>

@@ -10,10 +10,6 @@ body {
     background-image: url("../images/woods.jpg");
 }
 
-a {
-  color: #00B7FF;
-}
-
 .main {
     min-width: 400px;
     text-align: center;
@@ -25,20 +21,63 @@ svg line {
 }
 
 .hero {
-    padding-top: 10%;
+    text-align: center;
+    height: 440px;
 }
 
 .primary {
     display: inline-block;
-    border-radius: 2px;
+    border-radius: 4px;
     color: #191919;
-    background-color: #808E8E;
-    padding: 6px;
+    background: rgb(207, 171, 80);
+    background-color: rgba(207, 171, 80, 0.75);
+    padding: 4px 6px;
     margin: 6px;
     font-weight: bold;
     cursor: pointer;
+    font-size: 0.8em;
 }
 
 .primary:hover {
-    background-color: #CFAB50;
+    background-color: #808E8E;
+}
+
+.navigation ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+.navigation li {
+    display: inline-block;
+}
+
+h1, h2 {
+    font-weight: normal;
+    margin: 10px;
+}
+
+a {
+    color: #1C2524;
+    text-decoration: none;
+}
+
+.nav-logo {
+    width: 40px;
+    display: inline-block;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+nav {
+    padding-bottom: 20px;
+}
+
+nav div {
+    display: inline-block;
+}
+
+.nav-text {
+    height: 40px;
+    line-height: 40px;
+    vertical-align: middle;
 }

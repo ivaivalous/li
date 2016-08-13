@@ -7,27 +7,70 @@
         $urlRouterProvider.otherwise("/");
 
         $stateProvider
-            .state('login', {
-                url: "/вход",
-                templateUrl: "views/login/login.html"
+            .state('app', {
+                abstract: true,
+                views: {
+                    'top-nav': {
+                        templateUrl: 'views/navigation/top-navigation.html',
+                        controller: 'navigationController',
+                        controllerAs: 'vm'
+                    }
+                }
             })
             .state('dashboard', {
                 url: "/",
-                controller: "loginController",
-                controllerAs: "vm",
-                templateUrl: "views/dashboard/dash.html"
+                views: {
+                    'content@': {
+                        controller: "loginController",
+                        controllerAs: "vm",
+                        templateUrl: "views/dashboard/dash.html"
+                    }
+                }
             })
-            .state('story', {
-                url: "/история",
-                templateUrl: "views/story/story.html",
+            .state('app.story', {
+                url: "/за-нас",
+                niceName: "За нас",
+                views: {
+                    'content@': {
+                        templateUrl: "views/story/story.html",
+                    }
+                }
             })
-            .state('timeline', {
+            .state('app.map', {
+                url: "/карта",
+                niceName: "Карта",
+                views: {
+                    'content@': {
+                        templateUrl: "views/map/map.html",
+                    }
+                }
+            })
+            .state('app.timeline', {
                 url: "/разписание",
-                templateUrl: "views/timeline/timeline.html",
+                niceName: "Разписание",
+                views: {
+                    'content@': {
+                        templateUrl: "views/timeline/timeline.html",
+                    }
+                }
             })
-            .state('media', {
+            .state('app.info', {
+                url: "/информация",
+                niceName: "Информация",
+                views: {
+                    'content@': {
+                        templateUrl: "views/info/info.html",
+                    }
+                }
+            })
+            .state('app.media', {
                 url: "/медия",
-                templateUrl: "views/media/media.html",
+                niceName: "Снимки и видео",
+                views: {
+                    'content@': {
+                        templateUrl: "views/media/media.html",
+                    }
+                }
             });
     });
 

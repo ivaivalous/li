@@ -3,18 +3,27 @@
         борчета
     </object>
     <div class="general-info">
-        <h1>24.09.2016</h1>
+        <h1>Иво + Бубе</h1>
+        <h2>24.09.2016</h2>
     </div>
 </div>
 
-<div class="login-invite">
-    <span class="primary" ng-click="showLoginForm = true">влезте</span> за повече информация, снимки и инструкции
-</div>
-
-<div class="login-form" ng-show="showLoginForm">
-    Въведете кода, който можете да намерите отпечатан на гърба на поканата.
-    <input id="access-code" ng-model="vm.accessCode" type="text" />
-    <button class="confirm" ng-click="vm.login()">
-        Вход
-    </button>
+<div class="navigation">
+<ul>
+    <li class="primary">
+        <a ui-sref="app.story">За нас</a>
+    </li>
+    <li class="primary">
+        <a ui-sref="app.map">Карта</a>
+    </li>
+    <li class="primary">
+        <a ui-sref="app.timeline">Разписание</a>
+    </li>
+    <li class="primary">
+        <a ui-sref="app.info">Полезна информация</a>
+    </li>
+    <li class="primary">
+        <a ui-sref="app.media">Снимки и видео</a>
+    </li>
+</ul>
 </div>

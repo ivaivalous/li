@@ -1,3 +1,23 @@
 <div class="main-content">
-    This is the map page!
+    <div class="navigation">
+    <ul>
+        <li 
+            class="primary"
+            ng-class="{'selected': vm.selectedLocation.name === 'church'}"
+            ng-click="vm.selectLocation('church')">
+            Църква „Св. Тодор“
+        </li>
+        <li
+            class="primary"
+            ng-class="{'selected': vm.selectedLocation.name === 'restaurant'}"
+            ng-click="vm.selectLocation('restaurant')">
+            Хотел „Лион“
+        </li>
+    </ul>
+
+    <div class="map">
+        <ng-map center="[{{vm.selectedLocation.lat}}, {{vm.selectedLocation.long}}]" zoom="{{vm.selectedLocation.zoom}}">
+            <marker position="{{vm.selectedLocation.lat}}, {{vm.selectedLocation.long}}"></marker>
+        </ng-map>
+    </div>
 </div>

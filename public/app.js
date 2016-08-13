@@ -1,9 +1,12 @@
 (function() {
     "use strict";
 
-    var app = angular.module('app', ['ui.router']);
+    var app = angular.module(
+        'app', ['ui.router', 'ngMap']);
 
-    app.config(function($stateProvider, $urlRouterProvider) {
+    app.config(function(
+        $stateProvider, $urlRouterProvider) {
+
         $urlRouterProvider.otherwise("/");
 
         $stateProvider
@@ -41,6 +44,8 @@
                 niceName: "Карта",
                 views: {
                     'content@': {
+                        controller: "mapController",
+                        controllerAs: "vm",
                         templateUrl: "views/map/map.html",
                     }
                 }
@@ -71,7 +76,8 @@
                         templateUrl: "views/media/media.html",
                     }
                 }
-            });
+            }
+        );
     });
 
     app.run(function($rootScope) {

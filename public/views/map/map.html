@@ -15,6 +15,8 @@
         </li>
     </ul>
 
+    <h1>{{vm.selectedLocation.title}}</h1>
+
     <div class="map">
         <ng-map center="[{{vm.selectedLocation.lat}}, {{vm.selectedLocation.long}}]" zoom="{{vm.selectedLocation.zoom}}">
             <marker position="{{vm.selectedLocation.lat}}, {{vm.selectedLocation.long}}"></marker>

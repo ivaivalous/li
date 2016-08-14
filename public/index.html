@@ -3,6 +3,7 @@
 <head>
     <title>Любов и Иво</title>
     <link rel="stylesheet" href="/stylesheets/style.css">
+    <meta name=viewport content="width=device-width, initial-scale=1">
     <script src="javascript/lib/angular.min.js"></script>
     <script src="javascript/lib/angular-ui-router.min.js"></script>
     <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyDlEyvOxhXgS5_GECL7Tg8xDZbwuUAnfw8"></script>
@@ -16,8 +17,8 @@
 </head>
 
 <body ng-app="app">
-    <header ui-view="top-nav"></header>
-    <main ui-view="content"></main>
+    <header ui-view="top-nav" autoscroll="false"></header>
+    <main ui-view="content" autoscroll="false"></main>
 </body>
 
 </html>

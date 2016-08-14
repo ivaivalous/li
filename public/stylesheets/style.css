@@ -130,22 +130,40 @@ ng-map {
 .schedule-holder {
     margin: auto;
     width: 60%;
-    min-width: 340px;
+    min-width: 320px;
     background-color: #FFF3B2;
+    border-radius: 2px;
     color: #20312B;
 
     -webkit-box-shadow: 0px -1px 10px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px -1px 10px 0px rgba(0,0,0,0.75);
     box-shadow: 0px -1px 10px 0px rgba(0,0,0,0.75);
+
+    margin-bottom: 20px;
 }
 
 table.schedule {
     width: 100%;
+    min-width: 320px;
     border-collapse: collapse;
 }
 
 table.schedule td {
-    padding: 20px;
+    padding: 20px 10px;
+}
+
+td.time {
+    vertical-align: text-top;
+    min-width: 80px;
+    padding: 20px 0px 20px 10px !important;
+}
+
+td.map-link {
+    padding: 5px !important;
+}
+
+td.description {
+    vertical-align: text-top;
 }
 
 table.schedule tr:not(:last-child) td {
@@ -157,11 +175,13 @@ table.schedule tr:hover td {
 }
 
 .time {
-    font-size: 2em;
+    font-size: 1.4em;
+    min-width: 30px;
 }
 
 .minutes {
     display: inline-block;
+    font-size: 0.6em !important;
     padding: 4px 4px 20px 4px;
 }
 

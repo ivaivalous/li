@@ -8,7 +8,6 @@ body {
     font-family: 'Lobster', cursive;
     background-color: #191919;
     color: #CFAB50;
-    font-size: 1.6em;
     background-image: url("../images/woods.jpg");
 }
 
@@ -28,20 +27,149 @@ svg line {
     max-height: 440px;
 }
 
-.primary {
-    display: inline-block;
+@media screen and (min-width: 768px) {
+    body {
+        font-size: 1.6em;
+    }
+
+    .hero {
+        padding-top: 40px;
+    }
+
+    .primary {
+        display: inline-block;
+        min-width: 120px;
+        max-height: 200px;
+        padding: 4px 6px;
+    }
+
+    .schedule-holder {
+        width: 80%;
+        border-radius: 4px;
+    }
+
+    .info-panel {
+        display: inline-block;
+        vertical-align: top;
+        margin: 20px;
+        min-height: 280px;
+    }
+
+    .time {
+        font-size: 1.9em;
+        min-width: 40px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        margin: 0px;
+        font-size: 1.5em;
+    }
+
+    .primary {
+        display: block;
+        margin: auto;
+        min-width: 250px;
+        max-height: 100%;
+        padding: 20px 6px;
+        -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    }
+
+    .schedule-holder {
+        min-width: 320px;
+        display: block;
+        margin: auto;
+    }
+
+    .info-panel {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+        min-height: 180px;
+    }
+
+    .time {
+        font-size: 1.4em;
+        min-width: 30px;
+    }
+}
+
+.info-panel {
+    max-width: 420px;
+    min-width: 210px;
+    
+    padding: 20px;
+    text-align: justify;
+    background-color: #1B2423;
     border-radius: 4px;
+
+    -webkit-box-shadow: 0px -1px 15px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px -1px 15px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px -1px 15px 0px rgba(0,0,0,0.75);
+}
+
+.schedule-holder {
+    margin: auto;
+    background-color: #1B2423;
+    color: #CFAB50;
+
+    -webkit-box-shadow: 0px -1px 10px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px -1px 10px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px -1px 10px 0px rgba(0,0,0,0.75);
+
+    margin-bottom: 20px;
+}
+
+table.schedule {
+    width: 100%;
+    min-width: 320px;
+    border-collapse: collapse;
+}
+
+table.schedule td {
+    padding: 20px 10px;
+}
+
+td.time {
+    vertical-align: text-top;
+    min-width: 80px;
+    padding: 20px 0px 20px 10px !important;
+}
+
+td.map-link {
+    padding: 5px !important;
+}
+
+td.description {
+    vertical-align: text-top;
+}
+
+table.schedule tr:not(:last-child) td {
+    border-bottom: 2px solid #1F2928;
+}
+
+table.schedule tr:hover td {
+    background-color: #ffdb99;
+    color: #1B2423;
+    cursor: pointer;
+}
+
+.minutes {
+    display: inline-block;
+    font-size: 0.6em !important;
+    padding: 4px 4px 20px 4px;
+}
+
+.primary {
+    border-radius: 2px;
     color: #191919;
     background: rgb(207, 171, 80);
-    background-color: rgba(207, 171, 80, 0.55);
-    padding: 4px 6px;
+    background-color: rgba(207, 171, 80, 0.65);
     margin: 6px;
-    font-weight: bold;
     cursor: pointer;
     font-size: 0.8em;
-
-    min-width: 160px;
-    max-height: 200px;
 
    -moz-user-select: none;
    -khtml-user-select: none;
@@ -127,61 +255,24 @@ ng-map {
     overflow: hidden;
 }
 
-.schedule-holder {
+.info-section {
     margin: auto;
-    width: 60%;
-    min-width: 320px;
-    background-color: #FFF3B2;
-    border-radius: 2px;
-    color: #20312B;
-
-    -webkit-box-shadow: 0px -1px 10px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px -1px 10px 0px rgba(0,0,0,0.75);
-    box-shadow: 0px -1px 10px 0px rgba(0,0,0,0.75);
-
-    margin-bottom: 20px;
+    max-width: 1050px;
+    min-width: 300px;
+    font-size: 0.65em;
+    margin-bottom: 40px;
 }
 
-table.schedule {
-    width: 100%;
-    min-width: 320px;
-    border-collapse: collapse;
+.info-section p {
+    font-family: 'Cormorant Infant', serif;
+    font-size: 1.6em;
 }
 
-table.schedule td {
-    padding: 20px 10px;
+.info-panel h1 {
+    margin-left: 0px;
+    margin-top: 0px;
 }
 
-td.time {
-    vertical-align: text-top;
-    min-width: 80px;
-    padding: 20px 0px 20px 10px !important;
+.info-panel p {
+    min-height: 90px;
 }
-
-td.map-link {
-    padding: 5px !important;
-}
-
-td.description {
-    vertical-align: text-top;
-}
-
-table.schedule tr:not(:last-child) td {
-    border-bottom: 2px solid #1F2928;
-}
-
-table.schedule tr:hover td {
-    background-color: #ffdb99;
-}
-
-.time {
-    font-size: 1.4em;
-    min-width: 30px;
-}
-
-.minutes {
-    display: inline-block;
-    font-size: 0.6em !important;
-    padding: 4px 4px 20px 4px;
-}
-

@@ -281,6 +281,7 @@ ng-map {
 .info-section p {
     font-family: 'Cormorant Infant', serif;
     font-size: 1.6em;
+    padding: 4px;
 }
 
 .info-panel h1 {

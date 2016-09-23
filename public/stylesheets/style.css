@@ -1,7 +1,8 @@
 @import 'https://fonts.googleapis.com/css?family=Cormorant+Infant|Lobster';
 
-html, body {
+html, body, main {
     height: 100%;
+    min-height: 100%;
 }
 
 body {
@@ -15,6 +16,11 @@ body {
     min-width: 400px;
     text-align: center;
     margin: auto;
+    height: 100%
+}
+
+.main-content {
+    height: 100%;
 }
 
 svg line {
@@ -97,7 +103,7 @@ svg line {
 }
 
 .info-panel {
-    max-width: 420px;
+    max-width: 560px;
     min-width: 210px;
     
     padding: 20px;
@@ -110,6 +116,10 @@ svg line {
     box-shadow: 0px -1px 15px 0px rgba(0,0,0,0.75);
 }
 
+.info-panel a {
+    color: #fff;
+}
+
 .schedule-holder {
     margin: auto;
     background-color: #1B2423;
@@ -119,6 +129,7 @@ svg line {
     -moz-box-shadow: 0px -1px 10px 0px rgba(0,0,0,0.75);
     box-shadow: 0px -1px 10px 0px rgba(0,0,0,0.75);
 
+    margin-top: 60px;
     margin-bottom: 20px;
 }
 
@@ -187,6 +198,7 @@ table.schedule tr:hover td {
 
 .navigation {
     text-align: center;
+    height: calc(100% - 300px);
 }
 
 .navigation ul {
@@ -202,7 +214,7 @@ table.schedule tr:hover td {
 
 h1, h2 {
     font-weight: normal;
-    margin: 10px;
+    margin: 20px;
 }
 
 a {
@@ -251,13 +263,13 @@ nav div {
 
 ng-map {
     width: 100%;
-    height: 500px;
+    height: 100%;
     overflow: hidden;
 }
 
 .info-section {
     margin: auto;
-    max-width: 1050px;
+    max-width: 1350px;
     min-width: 300px;
     font-size: 0.65em;
     margin-bottom: 40px;

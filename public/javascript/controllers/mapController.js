@@ -9,6 +9,14 @@
         var vm = this;
 
         vm.map = {
+            yug: {
+                name: "Автогара Юг",
+                altNames: ["автогара"],
+                title: "Автогара Юг, София",
+                lat: 42.6691242,
+                long: 23.3504512,
+                zoom: 24
+            },
             church: {
                 name: "church",
                 altNames: ["църква", "снимки"],

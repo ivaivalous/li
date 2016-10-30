@@ -29,7 +29,7 @@ svg line {
 
 .hero {
     text-align: center;
-    max-height: 440px;
+    max-height: 840px;
 }
 
 @media screen and (min-width: 768px) {
@@ -291,4 +291,8 @@ ng-map {
 
 .info-panel p {
     min-height: 90px;
+}
+
+#guest-name {
+    text-decoration: underline;
 }

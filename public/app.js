@@ -24,7 +24,7 @@
                 url: "/",
                 views: {
                     'content@': {
-                        controller: "loginController",
+                        controller: "dashController",
                         controllerAs: "vm",
                         templateUrl: "views/dashboard/dash.html"
                     }

@@ -294,5 +294,10 @@ ng-map {
 }
 
 #guest-name {
-    text-decoration: underline;
+    color: #E48C1F;
+}
+
+.thank-you {
+    font-size: 1.8em;
+    color: #E48C1F;
 }

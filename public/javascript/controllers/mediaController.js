@@ -22,7 +22,7 @@
         function fetchPhotosList() {
             $http.get("photos").success(
                 function(data, status) {
-                    vm.pictures = JSON.parse(data);
+                    vm.albums = data;
                     albumShown = getAlbumFromState($stateParams.album);
             });
         }
@@ -48,11 +48,13 @@
         function getAlbumFromState(album) {
             // The user might have requested an album that
             // does not really exist.
-            if (vm.pictures[album] == undefined) {
-                return DEFAULT_ALBUM;
+            for (var i = 0; i < vm.albums.length; i++) {
+                if (vm.albums[i].displayName === album) {
+                    return album;
+                }
             }
 
-            return album;
+            return DEFAULT_ALBUM;
         }
     });
 })();

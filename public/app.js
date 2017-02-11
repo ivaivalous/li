@@ -2,7 +2,7 @@
     "use strict";
 
     var app = angular.module(
-        'app', ['ui.router', 'ngMap']);
+        'app', ['ui.router', 'ngMap', 'angularLazyImg']);
 
     app.config(function(
         $stateProvider, $urlRouterProvider) {

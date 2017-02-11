@@ -1,20 +1,24 @@
 <div class="main-content">
     <ul class="categories">
-        <li ng-repeat="(dir, files) in vm.pictures"
-            ng-click="vm.toggleShow(dir)"
+        <li ng-repeat="fileConf in vm.albums | orderBy:'order'"
+            ng-click="vm.toggleShow(fileConf.displayName)"
             class="primary"
-            ng-class="{shown:vm.shouldShow(dir)}"
-            ng-if="dir !== ''">
-                <a ui-sref="app.media({album: dir})">{{dir}}</a>
+            ng-class="{shown:vm.shouldShow(fileConf.displayName)}"
+            ng-if="fileConf.displayName !== ''">
+                <a ui-sref="app.media({album: fileConf.displayName})">
+                {{fileConf.displayName}}</a>
         </li>
     </ul>
 
     <div class="info-section">
-        <div class="photo-holder" ng-repeat="(dir, files) in vm.pictures">
-            <h1 ng-if="vm.shouldShow(dir)">{{dir}}</h1>
-            <div class="photo-holder" ng-repeat="filename in files"
-                    ng-if="vm.shouldShow(dir)">
-                <img class="photo" src="pictures/{{dir}}/{{filename}}" />
+        <div class="photo-holder" ng-repeat="fileConf in vm.albums">
+            <h1 ng-if="vm.shouldShow(fileConf.displayName)">
+                {{fileConf.displayName}}
+            </h1>
+            <div class="photo-holder"
+                ng-repeat="filename in fileConf.files"
+                ng-if="vm.shouldShow(fileConf.displayName)">
+                <img class="photo" lazy-img="pictures/{{fileConf.originalName}}/{{filename}}" />
             </div>
         </div>
     </div>

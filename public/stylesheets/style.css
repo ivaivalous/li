@@ -10,6 +10,7 @@ body {
     background-color: #191919;
     color: #CFAB50;
     background-image: url("../images/woods.jpg");
+    background-attachment: fixed;
 }
 
 .main {
@@ -300,4 +301,24 @@ ng-map {
 .thank-you {
     font-size: 1.8em;
     color: #E48C1F;
+}
+
+.photo-holder {
+    text-align: center;
+}
+
+.photo {
+    text-align: center;
+    max-height: 700px;
+    max-width: 70%;
+    margin: 20px;
+    box-shadow: 3px 3px 8px 0px rgba(0, 0, 0, 0.75);
+}
+
+.categories li {
+    text-align: center;
+}
+
+.shown {
+    background-color: #55645F;
 }

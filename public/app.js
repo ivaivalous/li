@@ -69,10 +69,12 @@
                 }
             })
             .state('app.media', {
-                url: "/медия",
+                url: "/медия/:album",
                 niceName: "Снимки и видео",
                 views: {
                     'content@': {
+                        controller: "mediaController",
+                        controllerAs: "vm",
                         templateUrl: "views/media/media.html",
                     }
                 }

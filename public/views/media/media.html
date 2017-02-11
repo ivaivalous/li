@@ -1,8 +1,21 @@
 <div class="main-content">
+    <ul class="categories">
+        <li ng-repeat="(dir, files) in vm.pictures"
+            ng-click="vm.toggleShow(dir)"
+            class="primary"
+            ng-class="{shown:vm.shouldShow(dir)}"
+            ng-if="dir !== ''">
+                <a ui-sref="app.media({album: dir})">{{dir}}</a>
+        </li>
+    </ul>
+
     <div class="info-section">
-        <h1>Очаквайте снимки и видео от годежа, сватбата и медения месец!</h1>
-        <p>
-            Засега снимките ни са само във фейсбук, но когато се сдобием с повече от тях, ще можем да ги добавим в галерия и тук. Чакаме ви на сватбата, където непременно ще се снимаме и с вас!
-        </p>
+        <div class="photo-holder" ng-repeat="(dir, files) in vm.pictures">
+            <h1 ng-if="vm.shouldShow(dir)">{{dir}}</h1>
+            <div class="photo-holder" ng-repeat="filename in files"
+                    ng-if="vm.shouldShow(dir)">
+                <img class="photo" src="pictures/{{dir}}/{{filename}}" />
+            </div>
+        </div>
     </div>
 </div>

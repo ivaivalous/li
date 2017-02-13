@@ -67,8 +67,8 @@ svg line {
     }
 
     .photo {
-        max-height: 700px;
-        max-width: 70%;
+        max-height: 600px;
+        max-width: 95%;
         margin: 20px;
     }
 }
@@ -326,6 +326,7 @@ ng-map {
 
 .categories {
     padding: 20px;
+    text-align: center;
 }
 
 .categories li {

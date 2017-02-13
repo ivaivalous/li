@@ -214,7 +214,6 @@ table.schedule tr:hover td {
 
 .navigation {
     text-align: center;
-    height: calc(100% - 300px);
 }
 
 .navigation ul {

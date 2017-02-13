@@ -68,6 +68,15 @@
                     }
                 }
             })
+            .state('app.credits', {
+                url: "/благодарности",
+                niceName: "Благодарности и заслуги",
+                views: {
+                    'content@': {
+                        templateUrl: "views/credits/credits.html",
+                    }
+                }
+            })
             .state('app.media', {
                 url: "/медия/:album",
                 niceName: "Снимки и видео",

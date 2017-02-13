@@ -1,8 +1,6 @@
-"use strict";
-
-const PICTURES_FOLDER = "public/pictures"
-const CURR_DIR = "";
-const ORDER_SEPARATOR = "_";
+var PICTURES_FOLDER = "public/pictures"
+var CURR_DIR = "";
+var ORDER_SEPARATOR = "_";
 
 var express = require('express');
 var fs = require('fs');

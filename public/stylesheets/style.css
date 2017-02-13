@@ -65,6 +65,12 @@ svg line {
         font-size: 1.9em;
         min-width: 40px;
     }
+
+    .photo {
+        max-height: 700px;
+        max-width: 70%;
+        margin: 20px;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -103,6 +109,12 @@ svg line {
     .time {
         font-size: 1.4em;
         min-width: 30px;
+    }
+
+    .photo {
+        max-height: 400px;
+        max-width: 90%;
+        margin: 10px 5px;
     }
 }
 
@@ -309,10 +321,11 @@ ng-map {
 
 .photo {
     text-align: center;
-    max-height: 700px;
-    max-width: 70%;
-    margin: 20px;
     box-shadow: 3px 3px 8px 0px rgba(0, 0, 0, 0.75);
+}
+
+.categories {
+    padding: 20px;
 }
 
 .categories li {

@@ -18,7 +18,14 @@
             <div class="photo-holder"
                 ng-repeat="filename in fileConf.files"
                 ng-if="vm.shouldShow(fileConf.displayName)">
-                <img class="photo" lazy-img="pictures/{{fileConf.originalName}}/{{filename}}" />
+
+                <a
+                    href="pictures_hires/{{fileConf.originalName}}/{{filename}}"
+                    target="_blank">
+                    <img
+                    class="photo"
+                    lazy-img="pictures/{{fileConf.originalName}}/{{filename}}" />
+                </a>
             </div>
         </div>
     </div>
